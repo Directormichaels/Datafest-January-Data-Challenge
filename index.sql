@@ -19,6 +19,7 @@ LIMIT 1;
 
 --Answer = Peacock (40 orders)
 
+
 -- 3. What product was ordered the most by customers in Germany?
 SELECT Products.ProductName, Orderdetails.Quantity
 FROM Customers JOIN Orders
@@ -30,3 +31,5 @@ ON Orderdetails.ProductID = Products.ProductID
 WHERE Country = "Germany"
 ORDER BY Quantity DESC
 LIMIT 1;
+
+--Answer = Steeleye Stout
