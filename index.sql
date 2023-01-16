@@ -5,9 +5,11 @@ JOIN Shippers
 ON Orders.ShipperID = Shippers.ShipperID
 WHERE ShipperName = "Speedy Express";
 
+-- Answer = 54
+
 
 -- 2. What was the last name of the employee with the most orders?
-SELECT Last name,COUNT(*) AS Number_of_Orders
+SELECT LastName,COUNT(*) AS Number_of_Orders
 FROM Orders
 JOIN Employees
 ON Orders.EmployeeID = Employees.EmployeeID
@@ -15,6 +17,7 @@ GROUP BY LastName
 ORDER BY Number_of_Orders DESC
 LIMIT 1;
 
+--Answer = Peacock (40 orders)
 
 -- 3. What product was ordered the most by customers in Germany?
 SELECT Products.ProductName, Orderdetails.Quantity
